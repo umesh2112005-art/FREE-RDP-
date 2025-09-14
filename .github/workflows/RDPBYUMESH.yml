@@ -84,7 +84,7 @@ jobs:
               Write-Error "Tailscale IP not assigned. Exiting."
               exit 1
           }
-          echo "TAILSCALE_IP=$tsIP" >> $env:GITHUB_ENV
+           "TAILSCALE_IP=$tsIP" >> $env:GITHUB_ENV
       
       - name: Verify RDP Accessibility
         run: |
@@ -108,4 +108,4 @@ jobs:
           
           # Keep runner active indefinitely
           while ($true) {
-              Write-Host "[$(Get-Date)] RDP Active
+              Write-Host "[$(Get-Date)] RDP Active - Use Ctrl+C in workflow to terminate"
